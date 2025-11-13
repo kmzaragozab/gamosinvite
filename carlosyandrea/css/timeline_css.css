@@ -1,0 +1,105 @@
+/* ---- Base & título ---- */
+.timeline {
+  padding: 40px 20px;
+}
+.timeline-title {
+  font-family: 'Great Vibes', cursive;
+  font-size: 2rem;
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+/* ---- Contenedor de la línea ---- */
+.timeline-container {
+  position: relative;
+  margin: 0 auto;
+  max-width: 500px;
+}
+
+/* Línea gris de fondo */
+.timeline-line {
+  position: absolute;
+  left: 50%;
+  top: 0;
+  width: 5px;
+  height: 100%;
+  background: #ddd;
+  transform: translateX(-50%);
+  z-index: 0;
+}
+
+/* Línea café de progreso */
+.timeline-progress {
+  position: absolute;
+  left: 50%;
+  top: 0;
+  width: 5px;
+  height: 0;
+  background: #b08968;
+  transform: translateX(-50%);
+  z-index: 1;
+  transition: height 0.8s linear;
+}
+
+/* ---- Cada item ---- */
+.timeline-item {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 50px;
+  z-index: 2; /* sobre las líneas */
+}
+
+/* Corazoncito */
+.timeline-point {
+  position: absolute;
+  left: 50%;
+  width: 24px;
+  height: 24px;
+  background: #b08968 url('../img/heart.svg') center center no-repeat;
+  background-size: 14px 14px;
+  border: 2px solid #b08968;
+  border-radius: 50%;
+  transform: translateX(-50%);
+  z-index: 3;
+}
+
+/* Texto a la izquierda */
+.timeline-time {
+  width: 45%;
+  text-align: right;
+  padding-right: 5px;
+  font-family: 'Montserrat', sans-serif;
+  color: #6b4c3b;
+  z-index: 4;
+}
+
+/* Iconos a la derecha */
+.timeline-icon {
+  width: 45%;
+  text-align: left;
+  padding-left: 5px;
+  z-index: 4;
+}
+.timeline-icon img {
+  width: 80px;
+  height: auto;
+}
+
+/* ---- Responsive móvil ---- */
+@media (max-width: 600px) {
+  .timeline-item {
+    flex-direction: row;
+    align-items: center;
+  }
+  .timeline-icon,
+  .timeline-time {
+    width: 40%;
+    text-align: center;
+  }
+  .timeline-point {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}

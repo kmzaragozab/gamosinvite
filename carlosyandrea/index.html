@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Carlos & Andrea</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="Free HTML Templates" name="keywords">
+    <meta content="Free HTML Templates" name="description">
+    <link rel="stylesheet" href="./BodaTheme.css">
+    <link rel="shortcut icon" href="img/diamond.png" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@glidejs/glide/dist/css/glide.core.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/@glidejs/glide/dist/glide.min.js"></script>
+    <!-- Gallery JS -->
+    <script src="js/glide_config.js"></script>
+    <link rel="stylesheet" href="css/polaroid_gallery.css">
+    <style>.catanis-loader-wraper.cata-style2 .heart:before,.catanis-loader-wraper.cata-style2 .heart:after{background: #cdc3b8;}#WID_catanis-loader{background-color: #f0ede9;}.WID_backgroud{background:#d2c4b9}</style>        <link href="https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&display=swap" rel="stylesheet">
+
+    <!-- Favicon -->
+    <link href="img/favicon.ico" rel="icon">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Montserrat:wght@400;600&display=swap" rel="stylesheet"> 
+
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="lib/owlcarousel/assets/owl_carousel_min.css" rel="stylesheet">
+    <link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet">
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/style.css" rel="stylesheet">
+    <!-- Timeline Stylesheet -->
+    <link href="css/timeline_css.css" rel="stylesheet">
+
+
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+          }
+.contenedor {
+  color: #FFFFFF;
+  text-align: center;
+}
+.cartel {
+  width: 109px;
+  height: 109px;
+  padding: 10px 0px 5px 0px;
+  text-align: center;
+  display: inline-block;
+  margin: 5px;
+  border: 3px solid #FFFFFF;
+  border-radius: 5px;
+}
+.cartel > div {
+  font-size: 50px;
+  font-family: "Chela One", sans serif;
+  animation: fade 3s;
+  line-height: 30px;
+  margin-top: 5px;
+}
+.cartel > div > h3 {
+  margin-top: 15px;
+  font-size: 20px;
+  font-weight: normal;
+  color: #FFFFFF
+}
+.h3 {
+  bottom: 0;
+  margin: 0 auto;
+}
+.contenedor {
+  margin-top: 3%;
+}
+.contenido {
+  width: 100%;
+  margin: 0 auto;
+  border: 0px solid black;
+  z-index: 10;
+}
+li {
+  display: inline-block;
+  font-size: 1.5em;
+  list-style-type: none;
+  padding: 1em;
+  text-transform: uppercase;
+}
+li span {
+  display: block;
+  font-size: 4.5rem;
+}
+.numeros {
+  font-family: "Chela one", sans-serif;
+  font-size: 60px;
+  transition: 0.3s;
+  animation-name: fade;
+  animation-duration: 3s;
+}
+.responsivo1 {
+  display: inline-block;
+}
+.responsivo2 {
+  display: inline-block;
+}
+@media (max-width: 450px) {
+  .contenedor {
+    margin-top: 15%;
+  }
+  .banner {
+    margin-bottom: 30px;
+  }
+  .cartel {
+    height: 99px;
+    width: 99px;
+  }
+  .cartel > div {
+    font-size: 45px;
+  }
+  .cartel > div > h3 {
+    font-size: 15px;
+    margin-top: 0px;
+  }
+}
+@keyframes fade {
+  0% {
+    opacity: 0;
+  }
+  30% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.button--free{
+  border: 3.5px solid #61402f !important;
+  border-color: #61402f;
+  color: black !important;
+  background-color: #fff;
+  &:hover{
+    box-shadow: 0 0 1em 0.5em #61402f;
+  }
+}
+
+</style>
+
+
+
+
+
+<script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>  
+</head>
+<body data-spy="scroll" data-target=".navbar" data-offset="51">
+    
+    
+    <!-- Navbar Start -->
+    <nav class="navbar fixed-top shadow-sm navbar-expand-lg bg-dark navbar-dark py-3 py-lg-0 px-lg-5">
+        <a href="index.html" class="navbar-brand d-block d-lg-none">
+            <h1 class="font-secondary text-white mb-n2">Carlos <span class="text-primary">&</span> Andrea</h1>
+        </a>
+        <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
+            <div class="navbar-nav ml-auto py-0">
+                <a href="#home" class="nav-item nav-link active">Inicio</a>
+                <a href="#about" class="nav-item nav-link">Presentación</a>
+                <a href="#date" class="nav-item nav-link">Fecha</a>
+               <!-- <a href="#location" class="nav-item nav-link">Lugar</a>-->
+            </div>
+            <a href="index.html" class="navbar-brand mx-5 d-none d-lg-block">
+                <h1 class="font-secondary text-white mb-n2">Carlos <span class="text-primary">&</span> Andrea</h1>
+            </a>
+            <div class="navbar-nav mr-auto py-0">
+             <!--  <a href="#schedule" class="nav-item nav-link">Itinerario</a> -->
+                <a href="#gifts" class="nav-item nav-link">Regalos</a>
+                <a href="#gallery" class="nav-item nav-link">Galería</a>
+                <a href="#rsvp" class="nav-item nav-link">Confirmación</a>
+            </div>
+        </div>
+    </nav>
+    <!-- Navbar End -->
+
+
+    <!-- Cover Start -->
+    <div class="container-fluid p-0 mb-5 pb-5" id="home">
+        <div id="header-carousel" class="carousel slide carousel-fade" data-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item position-relative active" style="height: 100vh; min-height: 400px;">
+                    <img class="position-absolute w-100 h-100" src="img/carousel-1.jpg" style="object-fit: cover;">
+                    <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
+                        <div class="p-3" style="max-width: 900px;">
+                            <h1 class="display-1 font-secondary text-white mt-n3 mb-md-4">Carlos & Andrea</h1>
+                            <div class="d-inline-block border-top border-bottom border-light py-3 px-4">
+                                <h3 class="text-uppercase font-weight-normal text-white m-0" style="letter-spacing: 2px;">¡Nos casamos!</h3>
+                            </div>
+                            
+                        </div>
+                        <div class="contenedor"> 
+                            <div class="contenido">
+                                <div class="contador">
+                                <div class="responsivo2">
+                                    <div class="cartel">
+                                    <div id="dias"></div>
+                                    <div class="h3"><h3>Días</h3></div>
+                                </div>
+                                    <div class="cartel">
+                                    <div id="horas"></div>
+                                    <div class="h3"><h3>Horas</h3></div>
+                                </div>
+                                <div class="cartel">
+                                    <div id="minutos"></div>
+                                    <div class="h3"><h3>Minutos</h3></div>
+                                    </div>
+                                    <div class="cartel">
+                                    <div id="segundos"></div>
+                                    <div class="h3"><h3>Segundos</h3></div>
+                                    </div>
+                                </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Cover End -->
+
+    
+
+    <!-- Presentation Start -->
+    <div class="container-fluid py-5" id="about">
+        <div class="container py-5">
+            <div class="section-title position-relative text-center">
+                <h1 class="font-secondary display-4">Presentación</h1>
+                <i class="far fa-heart text-dark"></i>
+            </div>
+            <div class="row m-0 mb-4 mb-md-0 pb-2 pb-md-0">
+                <div class="col-md-12 p-0 text-center text-md-right" >
+                    
+                    <div class="h-100 d-flex flex-column justify-content-center bg-secondary p-5" >
+                        <h1 class="font-secondary display-5 text-center" style="font-weight: 300">La historia de nuestro amor ha sido un viaje maravilloso, lleno de momentos alegres, divertidos e inolvidables. Ahora, queremos invitarte a celebrar el inicio de nuestro nuevo capítulo como esposos. Tu presencia hará que nuestra boda sea aún más especial para nosotros.</h1>
+                    </br>
+                    </br>
+                    </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Presentation End -->
+
+    <div class="container-fluid py-5" id="date">
+        <div class="container py-5">
+            <div class="section-title position-relative text-center">
+                <h6 class="text-uppercase text-primary mb-3" style="letter-spacing: 3px;">EL EVENTO TENDRÁ LUGAR EL DÍA</h6>
+                <h1 class="font-secondary display-4">Sábado 20 de Diciembre del 2025, a las 4:00 PM</h1>
+                <i class="far fa-heart text-dark"></i>
+            </div>
+        </div>
+    </div>
+    <!-- Event Start -->
+<div class="container-fluid py-5" id="location">
+    <div class="container py-5">
+        <div class="section-title position-relative text-center">
+            <h6 class="text-uppercase text-primary mb-3" style="letter-spacing: 3px;">Lugar del evento</h6>
+            <h1 class="font-secondary display-4">El evento tendrá lugar en:</h1>
+            <i class="far fa-heart text-dark"></i>
+        </div>
+        <div class="row justify-content-center">
+            <div class="col-md-8 text-center">
+                <img class="img-fluid mb-4" src="img/party.png" alt="">
+                <h4 class="mb-3">Boda Civil</h4>
+                <p class="mb-2">Cerritos 224, Residencial del Parque, 38010 Celaya, Gto.</p>
+                <p class="mb-4">04:00 PM</p>
+                <a class="btn btn-primary font-weight-bold py-3 px-5" href="https://maps.app.goo.gl/FMguNHBLZvEzEYnL8?g_st=iw" target="_blank">Ver mapa</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+    <!-- Gifts Start -->
+    <div class="container-fluid py-5" id="gifts">
+    <div class="container py-5">
+        <div class="section-title position-relative text-center">
+            <h1 class="font-secondary display-4">Mesa de regalos</h1>
+            <p class="mb-2">Nuestro mejor regalo es tu presencia.
+                Sin embargo, si tu deseo es hacernos un obsequio, estas son nuestras sugerencias..</p>
+            <i class="far fa-heart text-dark"></i>
+        </div>
+        <div class="row justify-content-center">
+            <div class="col-md-6 text-center">
+                <img class="img-fluid mb-4" src="img/bbva.png" width="250" height="60" alt="">
+                <h4 class="mb-3">Transferencia Bancaria</h4>
+                <p class="mb-2">4152314337000916</p>
+                <p class="mb-2">Andrea Alejandra Alvarado Figueroa</p>
+            </div>
+        </div>
+    </div>
+</div>
+    <!-- RSVP End -->
+
+    
+
+
+    <!-- Gallery Start -->
+    <div class="container-fluid py-5" id="gallery">
+      <div class="section-title position-relative text-center">
+        <h1 class="font-secondary display-4">Galería</h1>
+        <i class="far fa-heart text-dark"></i>
+      </div>
+      <section class="gallery">
+        <div class="glide">
+          <div class="glide__track" data-glide-el="track">
+            <ul class="glide__slides">
+              <li class="glide__slide"><div class="photo-frame rotate-left"><img src="./img/img1.jpg" class="photo"></div></li>
+              <li class="glide__slide"><div class="photo-frame rotate-right"><img src="./img/img2.jpg" class="photo"></div></li>
+              <li class="glide__slide"><div class="photo-frame rotate-left"><img src="./img/img3.jpg" class="photo"></div></li>
+              <li class="glide__slide"><div class="photo-frame rotate-right"><img src="./img/img4.jpg" class="photo"></div></li>
+              <li class="glide__slide"><div class="photo-frame rotate-left"><img src="./img/img5.jpg" class="photo"></div></li>
+              <li class="glide__slide"><div class="photo-frame rotate-right"><img src="./img/img6.jpg" class="photo"></div></li>
+              <li class="glide__slide"><div class="photo-frame rotate-left"><img src="./img/img7.jpg" class="photo"></div></li>
+              <li class="glide__slide"><div class="photo-frame rotate-right"><img src="./img/img8.jpg" class="photo"></div></li>
+            </ul>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <!-- Lightbox -->
+<div id="gallery-lightbox" class="gallery-lightbox">
+  <span class="gallery-lightbox__close">&times;</span>
+  <img class="gallery-lightbox__img" src="" alt="Foto ampliada">
+</div>
+    <!-- Gallery End -->
+
+
+    
+
+
+    
+
+
+    <!-- RSVP Start -->
+    <div class="container-fluid py-5" id="rsvp">
+        <div class="container py-5">
+            <div class="section-title position-relative text-center">
+                <h6 class="text-uppercase text-primary mb-3" style="letter-spacing: 3px;">RSVP</h6>
+                <h1 class="font-secondary display-4">Confirma tu asistencia</h1>
+                <p class="mb-2">Agradecemos que puedas notificarnos de antemano tu asistencia a este día tan importante</p>
+                <i class="far fa-heart text-dark"></i>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <div class="text-center">
+                        <div>
+                            
+                            <a class="btn btn-primary font-weight-bold py-3 px-5" href="https://docs.google.com/forms/d/e/1FAIpQLScbqxyLvBAYSd8gNBytKDmdXhl4Wa-SwdynKlJrBbz7T_fd4Q/viewform?usp=header" target="_blank">Confirmar</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- RSVP End -->
+
+    <div class="WID_backgroud" id="WID_init"></div>
+    <div class="WID_content">
+        <div id="WID_" style="width: 670px; left: 625px; top: 0px;">
+          <div class="WID_img_left" style="width: 625px; left: -625px;">
+            <div class="WID_animate" style="animation: 4s ease 1.6s 1 normal both paused ani-81472;">
+              <div class="WID_inner_bg" style="background-size:100% 100%;background-image:url(sobre_izquierdo.png);"></div>
+            </div>
+          </div>
+
+          <div class="WID_img_btn" style="width: 187.5px; height: 187.5px; top: 361.75px; left: 147.4px;">
+            <div class="WID_animate">
+              <div class="WID_inner_bg" style="animation:ani-42861 2s ease 0s 999 both;background-image:url(sello.png);"></div>
+            </div>
+          </div>
+
+          <div class="WID_img_right" style="width: 625px; right: -625px;">
+            <div class="WID_animate" style="animation: 2s ease 1s 1 normal both paused ani-87204; transform-origin: 100% 50% 0px;">
+              <div class="WID_inner_bg" style="background-position:left center;background-size:100% 100%;background-image:url(sobre_derecho.png);"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+ 
+
+
+    <!-- Footer Start -->
+    <div class="container-fluid bg-dark text-white py-5" id="contact" style="margin-top: 90px;">
+        <div class="container text-center py-5">
+            <div class="section-title position-relative text-center">
+                <h1 class="font-secondary display-3 text-white">Esperamos que puedan acompañarnos</h1>
+                <i class="far fa-heart text-white"></i>
+            </div>
+            
+        </div>
+    </div>
+    <!-- Footer End -->
+
+
+    <!-- Scroll to Bottom -->
+    <i class="fa fa-2x fa-angle-down text-white scroll-to-bottom"></i>
+
+    <!-- Back to Top -->
+    <a href="#" class="btn btn-lg btn-outline-primary btn-lg-square back-to-top"><i class="fa fa-angle-double-up"></i></a>
+
+
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/owlcarousel/owl_carousel_min.js"></script>
+    <script src="lib/isotope/isotope_pkgd_min.js"></script>
+    <script src="lib/lightbox/js/lightbox.min.js"></script>
+
+    <!-- Template Javascript -->
+    <script src="js/main.js"></script>
+    <script>
+        const second = 1000,
+            minute = second * 60,
+            hour = minute * 60,
+            day = hour * 24;
+    
+        function initializeCounter(countDownDate, daysId, hoursId, minutesId, secondsId) {
+            let x = setInterval(function () {
+                let now = new Date().getTime(),
+                    distance = countDownDate - now;
+    
+                document.getElementById(daysId).innerText = Math.floor(distance / (day));
+                document.getElementById(hoursId).innerText = Math.floor((distance % (day)) / (hour));
+                document.getElementById(minutesId).innerText = Math.floor((distance % (hour)) / (minute));
+                document.getElementById(secondsId).innerText = Math.floor((distance % (minute)) / second);
+            }, second);
+        }
+    
+        // Ejemplo de uso para el primer conjunto de elementos
+        let countDown1 = new Date('Dec 20, 2025 16:00:00').getTime();
+        initializeCounter(countDown1, 'dias', 'horas', 'minutos', 'segundos');
+    </script>
+    
+      <script src='wid.js' id='widjs-js'></script>
+      <!-- AOS JS -->
+      <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+      <!-- Timeline JS -->
+      <script src="js/timeline_js.js"></script>
+</body>
+
+</html>
