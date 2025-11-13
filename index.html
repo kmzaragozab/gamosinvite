@@ -1,62 +1,215 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Technical Difficulties 😅</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Error 404 — nada que ver aquí, bebé</title>
+  <meta name="theme-color" content="#0e0f11">
   <style>
-    :root { --gap: 20px; }
-    html, body { height: 100%; margin: 0; }
-    body {
-      display: grid;
-      place-items: center;
-      background: #0f0f10;
-      color: #fff;
-      font-family: system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+    :root{
+      --bg1:#0e0f11; --bg2:#1a1c20; --ink:#e9f0ff; --muted:#a9b1c7;
+      --accent:#b8ffcc; --accent2:#ffc2e7; --accent3:#b3d1ff;
+      --card:#121317; --shadow:0 10px 40px rgba(0,0,0,.45);
     }
-    .wrap {
-      display: grid;
-      gap: var(--gap);
-      place-items: center;
-      text-align: center;
-      padding: 24px;
-      width: min(100%, 1100px);
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0; color:var(--ink); font-family: ui-rounded, system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue", Arial, "Noto Sans", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+      background: radial-gradient(1200px 800px at 80% 0%, #1b2130 0%, var(--bg1) 55%) fixed,
+                  linear-gradient(135deg, var(--bg2), var(--bg1)) fixed;
+      display:grid; place-items:center; overflow:hidden;
     }
-    img {
-      width: 100%;
-      height: auto;
-      max-height: 70vh;            /* que no se pase en móviles */
-      object-fit: contain;
-      border-radius: 12px;
-      box-shadow: 0 10px 40px rgba(0,0,0,.55);
+
+    /* Estrellas suaves */
+    .stars, .grain{position:fixed; inset:0; pointer-events:none}
+    .stars{
+      background-image:
+        radial-gradient(1px 1px at 20% 30%, #fff6 40%, transparent 41%),
+        radial-gradient(1px 1px at 70% 20%, #fff6 40%, transparent 41%),
+        radial-gradient(1px 1px at 40% 80%, #fff6 40%, transparent 41%),
+        radial-gradient(1.2px 1.2px at 85% 60%, #fff4 40%, transparent 41%),
+        radial-gradient(1.4px 1.4px at 10% 70%, #fff3 40%, transparent 41%);
+      animation: twinkle 6s linear infinite;
+      opacity:.55;
     }
-    .btn {
-      display: inline-block;
-      padding: 12px 18px;
-      border-radius: 999px;
-      background: #ffd84d;
-      color: #222;
-      text-decoration: none;
-      font-weight: 700;
+    @keyframes twinkle{to{transform:translateY(-0.4%)}} 
+
+    /* Grano lofi */
+    .grain{
+      background-image: url('data:image/svg+xml;utf8,\
+        <svg xmlns="http://www.w3.org/2000/svg" width=\"140\" height=\"140\" viewBox=\"0 0 140 140\">\
+        <filter id=\"n\"><feTurbulence type=\"fractalNoise\" baseFrequency=\"0.9\" numOctaves=\"2\" stitchTiles=\"stitch\"/></filter>\
+        <rect width=\"100%\" height=\"100%\" filter=\"url(%23n)\" opacity=\"0.08\"/>\
+        </svg>');
+      mix-blend-mode: soft-light; opacity:.6; animation: film 1.6s steps(3,end) infinite;
     }
-    .btn:hover { filter: brightness(0.95); }
-    .note { opacity: .8; font-size: .95rem; }
+    @keyframes film{to{transform:translate3d(-1%,1%,0)}}
+
+    .wrap{
+      width:min(100%, 980px);
+      padding: clamp(20px, 3vw, 36px);
+      display:grid; gap:22px; place-items:center; text-align:center;
+    }
+
+    /* Tarjeta central */
+    .card{
+      width:min(100%, 760px);
+      background: linear-gradient(180deg, #151821, #101218);
+      border:1px solid #262a34; border-radius:22px; padding:28px;
+      box-shadow: var(--shadow);
+      position:relative; overflow:hidden;
+    }
+    .card::before{
+      content:""; position:absolute; inset:-40% -40% auto auto; height:180px; width:180px;
+      background: radial-gradient(closest-side, #9dffd2, transparent);
+      filter: blur(30px); opacity:.13; transform: rotate(25deg);
+    }
+
+    .tag{
+      display:inline-block; padding:6px 12px; border-radius:999px;
+      background:#0f1320; border:1px solid #273048; color:var(--muted); font-size:.9rem;
+    }
+
+    .title{
+      font-weight:900; letter-spacing:.5px; line-height:1.05;
+      font-size: clamp(2.2rem, 6vw, 4rem);
+      margin:10px 0 6px;
+      background: linear-gradient(120deg, var(--accent), var(--accent2), var(--accent3));
+      -webkit-background-clip:text; background-clip:text; color:transparent;
+      text-shadow: 0 2px 0 #0004;
+    }
+    .subtitle{
+      margin:0; color:var(--muted); font-size: clamp(1rem, 2.3vw, 1.15rem);
+    }
+
+    /* Gato pixel y casete */
+    .row{display:grid; gap:24px; grid-template-columns: 1fr; align-items:center; margin-top:18px}
+    @media (min-width:760px){ .row{ grid-template-columns: 1.2fr .9fr } }
+
+    .scene{
+      aspect-ratio: 16/10; border-radius:18px; background: #0f1116; border:1px solid #262a34;
+      display:grid; place-items:center; position:relative; overflow:hidden;
+    }
+    .cat{
+      width:min(70%, 280px);
+      filter: drop-shadow(0 6px 24px rgba(0,0,0,.55));
+      image-rendering: pixelated;
+      animation: bob 3.5s ease-in-out infinite;
+    }
+    @keyframes bob{50%{transform:translateY(-6px)}}
+
+    .tape{
+      position:absolute; right:-24px; top:-24px; width:160px; transform: rotate(18deg);
+      opacity:.7; filter: drop-shadow(0 6px 24px rgba(0,0,0,.35));
+      animation: spin 9s linear infinite;
+    }
+    @keyframes spin{to{transform:rotate(378deg)}}
+
+    .cta{display:flex; flex-wrap:wrap; gap:12px; justify-content:center; margin-top:8px}
+    .btn{
+      appearance:none; border:1px solid #2b3142; background:#131722; color:var(--ink);
+      padding:12px 16px; border-radius:12px; cursor:pointer; font-weight:700;
+      transition: transform .1s ease, background .2s ease, border .2s ease;
+      text-decoration:none; display:inline-flex; align-items:center; gap:10px;
+    }
+    .btn:hover{ transform: translateY(-1px); background:#0f1522; border-color:#3a4258 }
+    .btn--accent{ background:#1f2a2a; border-color:#2c4d4d }
+    .btn--accent:hover{ background:#1a2323 }
+
+    .note{color:var(--muted); font-size:.95rem}
+    .footer{opacity:.55; font-size:.85rem}
+
+    /* Ocultar iframe hasta pedir consentimiento */
+    .player{display:none; width:min(100%, 760px); height:220px; border:0; border-radius:14px; box-shadow: var(--shadow)}
+    .player.is-visible{display:block}
   </style>
 </head>
 <body>
+  <div class="stars"></div>
+  <div class="grain"></div>
+
   <main class="wrap">
-    <!-- Tu imagen -->
-    <img src="https://www.mikeburger.com/td-simpsons-dog.jpg" alt="Technical difficulties, please stand by" loading="eager" />
+    <div class="card">
+      <span class="tag">404 • página no encontrada</span>
+      <h1 class="title">Nada que ver aquí, bebé</h1>
+      <p class="subtitle">Tal vez la página tomó un café y se fue a estudiar con lofi ☕🎧</p>
 
-    <!-- Botón hacia la invitación -->
+      <div class="row">
+        <div class="scene">
+          <!-- gatito pixel aesthetic -->
+          <svg class="cat" viewBox="0 0 64 64" aria-hidden="true">
+            <rect width="64" height="64" fill="#151a23"/>
+            <path d="M12 38h40v10H12z" fill="#1e2430"/>
+            <path d="M18 24h28v16H18z" fill="#262e3d"/>
+            <path d="M22 18h8v8h-8zM34 18h8v8h-8z" fill="#2e3950"/>
+            <circle cx="28" cy="28" r="2" fill="#fff"/>
+            <circle cx="36" cy="28" r="2" fill="#fff"/>
+            <rect x="30" y="32" width="4" height="2" fill="#a3ffcf"/>
+            <rect x="26" y="40" width="12" height="2" fill="#95a3be"/>
+          </svg>
+          <!-- casete -->
+          <svg class="tape" viewBox="0 0 200 120" aria-hidden="true">
+            <rect x="10" y="10" width="180" height="100" rx="18" fill="#222a36" stroke="#3b4254"/>
+            <rect x="24" y="28" width="152" height="40" rx="8" fill="#101522" stroke="#323a4e"/>
+            <circle cx="70" cy="50" r="16" fill="#0f1826" stroke="#3b4156"/>
+            <circle cx="130" cy="50" r="16" fill="#0f1826" stroke="#3b4156"/>
+            <rect x="24" y="76" width="152" height="20" rx="6" fill="#161c29" />
+            <rect x="88" y="78" width="24" height="16" rx="3" fill="#0f1420"/>
+          </svg>
+        </div>
 
-    <div class="note">No hay nada que ver aquí, bebé 😎</div>
+        <div>
+          <p class="note">Puede que escribiste mal la URL o que este rincón del Internet aún está en construcción.</p>
+          <div class="cta">
+            <button id="musicBtn" class="btn">🎧 Poner música lofi</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Reproductor: aparece solo cuando el usuario lo solicita -->
+    <iframe
+      id="player"
+      class="player"
+      title="Lofi stream"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+      allowfullscreen
+      referrerpolicy="strict-origin-when-cross-origin">
+    </iframe>
   </main>
 
-  <!-- Si quieres redirigir automáticamente después de 2.5s, descomenta esto
   <script>
-    setTimeout(() => location.href = "/carlosyandrea", 2500);
+    // Reproducir lofi bajo consentimiento: mostramos el iframe solo al hacer clic
+    const btn = document.getElementById('musicBtn');
+    const player = document.getElementById('player');
+    btn.addEventListener('click', () => {
+      // Puedes cambiar el enlace por tu stream/playlist favorita:
+      // Ejemplo: Lofi Girl stream (cámbialo si prefieres otro)
+      const YT = "https://www.youtube.com/embed/jfKfPfyJRdk?autoplay=1&rel=0&modestbranding=1";
+      player.src = YT;
+      player.classList.add('is-visible');
+      btn.textContent = "⏸️ Detener música";
+      btn.onclick = () => {
+        player.src = "";
+        player.classList.remove('is-visible');
+        btn.textContent = "🎧 Poner música lofi";
+      };
+    }, { once:true });
+
+    // Accesibilidad: cerrar música con ESC
+    document.addEventListener('keydown', e=>{
+      if(e.key === 'Escape' && player.classList.contains('is-visible')){
+        player.src=""; player.classList.remove('is-visible');
+        btn.textContent="🎧 Poner música lofi";
+        // permitir volver a activarla
+        btn.addEventListener('click', () => {
+          const YT="https://www.youtube.com/embed/jfKfPfyJRdk?autoplay=1&rel=0&modestbranding=1";
+          player.src = YT;
+          player.classList.add('is-visible');
+          btn.textContent = "⏸️ Detener música";
+        }, { once:true });
+      }
+    });
   </script>
-  -->
 </body>
 </html>
